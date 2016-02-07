@@ -35,4 +35,4 @@
 9. In the C# application select the "board one" option from the menu and click the "8KHz" button under the "50MHz" label.
 10. Repeat these steps for "16KHz/50MHz", "8KHz/125MHz", and "16KHz/125MHz".
 11. Now do all of this over again for your partner's board.
-12. Make all 8 measurements over again, giving you a total of 16 measurements so far. Don't give up you're going great! :clap: :tada: :star2:
+12. Make all 8 measurements over again, giving you a total of 16 measurements so far. Don't give up you're doing great! :clap: :tada: :star2:
