@@ -24,7 +24,7 @@
 
 ##Procedure:
 
-1. Plug your zybo board into your PC and connect the DA2 PMOD into the upper section of the Zybo JC port.
+1. Plug your zybo board into your PC and connect the DA2 PMOD into the upper section of the Zybo JB port.
 2. Unzip file containing the 4 Vivado projects and open the first one in the 50MHz folder names "8KHz".
 3. Download the bitstream to the board.
 4. Open the included c# application.
@@ -35,4 +35,11 @@
 9. In the C# application select the "board one" option from the menu and click the "8KHz" button under the "50MHz" label.
 10. Repeat these steps for "16KHz/50MHz", "8KHz/125MHz", and "16KHz/125MHz".
 11. Now do all of this over again for your partner's board.
-12. Make all 8 measurements over again, giving you a total of 16 measurements so far. Don't give up you're doing great! :clap: :tada: :star2:
+12. Make all 8 measurements over again, giving you a total of 16 measurements so far. Don't give up you're doing great! Take this emoji of a squirel with a hat for motivation. :squirrel:
+13. Finally disconnect the DA2 PMOD, turn off the waveform generator, open up the "DirectMeasure" program, and write the bitstream to the board.
+14. Measure the waveform on the JC1 directly using the oscilloscope. This should be close to 50MHz. Do the same for JC2, this should be close to 125MHz.
+15. Pat yourself on the back because you're done! :clap: :tada: :star2:
+
+##Notes:
+- Direct measurements do not work properly in C# just yet. Hopely you don't get this far before this is fixed.
+- Use the DSO for direct measurements. The analog scopes are way too inaccurate at these frequencies. For the other steps either the digital or analog scopes will do.  
