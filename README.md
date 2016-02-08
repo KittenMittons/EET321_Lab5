@@ -44,4 +44,4 @@
 - Direct measurements do not work properly in C# just yet. Hopely you don't get this far before this is fixed.
 - Use the DSO for direct measurements. The analog scopes are way too inaccurate at these frequencies. For the other steps either the digital or analog scopes will do.
 - The references in C# should be working fine, but just in case they don't follow the steps in: "How to Add Reference to C#.txt".
--Board ID's should be of the form (Initials)(Zybo serial code). The zybo serial number is listed on the bottom of the board. Look at the SQL sample excel document for an example on what the ID should look like.
+- Board ID's should be of the form (Initials)(Zybo serial code). The zybo serial number is listed on the bottom of the board. Look at the SQL sample excel document for an example on what the ID should look like.
