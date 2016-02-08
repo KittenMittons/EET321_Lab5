@@ -42,4 +42,5 @@
 
 ##Notes:
 - Direct measurements do not work properly in C# just yet. Hopely you don't get this far before this is fixed.
-- Use the DSO for direct measurements. The analog scopes are way too inaccurate at these frequencies. For the other steps either the digital or analog scopes will do.  
+- Use the DSO for direct measurements. The analog scopes are way too inaccurate at these frequencies. For the other steps either the digital or analog scopes will do.
+- The references in C# should be working fine, but just in case they don't follow the steps in: "How to Add Reference to C#.txt".
