@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="EET321_Lab5_S16" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=IET2;Initial Catalog=EET321_Lab5_S16;User ID=EET321" SettingsObjectName="Lab5.Properties.Settings" SettingsPropertyName="EET321_Lab5_S16ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.EET321_Lab5_Table" Member="EET321_Lab5_Tables">
+    <Type Name="EET321_Lab5_Table">
+      <Column Name="DateTime" Type="System.DateTime" DbType="DateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="GroupID" Type="System.String" DbType="NChar(3) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="BoardID" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="SystemClockFreq" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SampleFrequency" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DataSet" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Measurement" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,6 @@
+Right click references
+click add reference
+Drop down Assemblies
+click on Extensions
+Scroll down to National Istruments Common version 15.0.40.49154
+Add it to project.
