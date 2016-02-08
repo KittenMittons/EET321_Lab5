@@ -94,6 +94,7 @@
             // 
             // buttonDirect50MHz
             // 
+            this.buttonDirect50MHz.Enabled = false;
             this.buttonDirect50MHz.Location = new System.Drawing.Point(12, 302);
             this.buttonDirect50MHz.Name = "buttonDirect50MHz";
             this.buttonDirect50MHz.Size = new System.Drawing.Size(117, 23);
@@ -104,6 +105,7 @@
             // 
             // buttonDirect125MHz
             // 
+            this.buttonDirect125MHz.Enabled = false;
             this.buttonDirect125MHz.Location = new System.Drawing.Point(12, 331);
             this.buttonDirect125MHz.Name = "buttonDirect125MHz";
             this.buttonDirect125MHz.Size = new System.Drawing.Size(118, 23);

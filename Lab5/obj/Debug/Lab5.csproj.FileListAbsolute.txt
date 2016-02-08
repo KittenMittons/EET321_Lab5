@@ -30,3 +30,13 @@ E:\EET321_Measurement_and_Tests_Lab\Lab_5\Lab5\obj\Debug\Lab5.csprojResolveAssem
 E:\EET321_Measurement_and_Tests_Lab\Lab_5\Lab5\obj\Debug\Lab5.Form1.resources
 E:\EET321_Measurement_and_Tests_Lab\Lab_5\Lab5\obj\Debug\Lab5.Properties.Resources.resources
 E:\EET321_Measurement_and_Tests_Lab\Lab_5\Lab5\obj\Debug\Lab5.csproj.GenerateResource.Cache
+V:\EET321_Lab5\Lab5\bin\Debug\Lab5.exe.config
+V:\EET321_Lab5\Lab5\obj\Debug\Lab5.exe
+V:\EET321_Lab5\Lab5\obj\Debug\Lab5.pdb
+V:\EET321_Lab5\Lab5\bin\Debug\Lab5.exe
+V:\EET321_Lab5\Lab5\bin\Debug\Lab5.pdb
+V:\EET321_Lab5\Lab5\bin\Debug\NationalInstruments.NI4882.dll
+V:\EET321_Lab5\Lab5\obj\Debug\Lab5.csprojResolveAssemblyReference.cache
+V:\EET321_Lab5\Lab5\obj\Debug\Lab5.Form1.resources
+V:\EET321_Lab5\Lab5\obj\Debug\Lab5.Properties.Resources.resources
+V:\EET321_Lab5\Lab5\obj\Debug\Lab5.csproj.GenerateResource.Cache
