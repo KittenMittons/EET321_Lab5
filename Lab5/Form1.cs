@@ -21,13 +21,15 @@ namespace Lab5
         // Global Variables *************************************************************************\\
 
         NationalInstruments.NI4882.Device NI = new NationalInstruments.NI4882.Device(0, 1); // Initialize function generator on GPIB address 1.
+        NationalInstruments.NI4882.Device OSC = new NationalInstruments.NI4882.Device(0, 2); // Initialize oscilloscope on GPIB address 2.
+
         DataClasses1DataContext zybo = new DataClasses1DataContext();
 
         // Variables
         float freq;             // Float for true frequency calculation.
         float truefreq;         // Float for the true frequency result.
         string stringfreq;      // String for frequency.
-
+        
         // Lists for SQL Data
         List<string> BoardID = new List<string>();
         List<string> Dataset = new List<string>();
@@ -43,14 +45,14 @@ namespace Lab5
             string choice = listBoxChoice.Text;     // Choice of listbox.
             int clock = 50;                         // System clock of 50MHz
             int samplefreq = 8;                     // Sample frequency of 8KHz.
-            float count = 6250;                     // Count factor is 6250 for 8KHz and 50MHz.
+            float count = 6250;                     // Count factor is 6250 for 8KHz and 50MHz. USE THIS FOR THE DIVISION OF THE FREQUENCY.
 
             NI.Write("SOUR:FREQ?");                 // Measure the frequency of the function generator.
             stringfreq = NI.ReadString();           // Read frequency of function generator and store as a string.
             freq = float.Parse(stringfreq);         // Convert string to float.
             truefreq = freq * count;                // Calculate true frequency of the board's oscillator.
 
-            listswitch(choice, clock, samplefreq); // Calls the listswitch function, and passes 3 parameters to it.
+            listswitch(choice, clock, samplefreq);  // Calls the listswitch function, and passes 3 parameters to it.
         }
 
         private void button50MHz16KHz_Click(object sender, EventArgs e)
@@ -104,8 +106,8 @@ namespace Lab5
             int clock = 50;
             int samplefreq = 0;
 
-            NI.Write("SOUR:FREQ?");
-            stringfreq = NI.ReadString();
+            OSC.Write(":MEAS:FREQ? CHAN1"); // Send the command to read the frequency of the oscilloscope.
+            stringfreq = OSC.ReadString();
             truefreq = float.Parse(stringfreq);
 
             listswitch(choice, clock, samplefreq);
@@ -117,8 +119,8 @@ namespace Lab5
             int clock = 125;
             int samplefreq = 0;
 
-            NI.Write("SOUR:FREQ?");
-            stringfreq = NI.ReadString();
+            OSC.Write(":MEAS:FREQ? CHAN1"); // Send the command to read the frequency of the oscilloscope.
+            stringfreq = OSC.ReadString();
             truefreq = float.Parse(stringfreq);
 
             listswitch(choice, clock, samplefreq);
@@ -130,7 +132,7 @@ namespace Lab5
             DataClasses1DataContext zybo = new DataClasses1DataContext();           
 
             // For loop that setps through lists and submits data to the SQL. Data is all stored
-            // on lists that the positions correspond with the data. This makes it easy to step
+            // on lists that the positions correspond with the individual data. This makes it easy to step
             // through the lists with the same count to get the correct data together.
             for (int count = 0; count < Measurement.Count; count++)
             {
@@ -207,7 +209,12 @@ namespace Lab5
                     // SQL data list additions.
                     BoardID.Add(textBoxB1Init.Text);    // Adding correct board ID from the board ID textbox onto the list.
                     Samplefreq.Add(samplefreq);         // Adding the sample frequency to the list.
-                    Dataset.Add("First");               // Add the correct data set to the list.
+                    if (samplefreq == 0)
+                    {
+                        Dataset.Add("Direct");          // If it is a direct measurement, add the Direct dataset
+                    }
+                    else
+                        Dataset.Add("First");           // If it is not a direct measurement, add the correct dataset
                     Systemclockfreq.Add(clock);         // Add the correct system clock frequency to the list.
                     Measurement.Add(truefreq);          // Add the measurement to the list.
                     break;
@@ -240,7 +247,12 @@ namespace Lab5
 
                     BoardID.Add(textBoxB2Init.Text);
                     Samplefreq.Add(samplefreq);
-                    Dataset.Add("Second");
+                    if (samplefreq == 0)
+                    {
+                        Dataset.Add("Direct");       
+                    }
+                    else
+                        Dataset.Add("Second");           
                     Systemclockfreq.Add(clock);
                     Measurement.Add(truefreq);
                     break;
